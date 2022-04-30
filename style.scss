@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%); 
+
+$smoothShadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+
+body {
+    background-color: $DarkBlue;
+    color: $LightCyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.adviceContainer {
+    background-color: $DarkGrayishBlue;
+    max-width: 600px;
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: $smoothShadow;
+
+
+
+    h1 {
+        font-size: 28px;
+        padding: 30px;
+
+    }
+
+    h3 {
+        text-transform: uppercase;
+        color: $NeonGreen;
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .divider {
+        background-image: url('/images/pattern-divider-desktop.svg');
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+        margin: auto;
+
+        width:444px;
+
+        height: 16px;
+
+
+        
+    }
+
+    .dice {
+        background-color: $NeonGreen;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        padding: 15px;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: -60px;
+        box-shadow: $smoothShadow;
+
+        svg{
+            margin-top: 3px; 
+        }
+
+        &:hover {
+            box-shadow: 0 0 30px $NeonGreen;
+            cursor: pointer;
+        }
+
+
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    .adviceContainer {
+        max-width: 400px;
+
+        .divider {
+            background-image: url('/images/pattern-divider-mobile.svg');
+            width: 295px;
+            
+        }
+    }
+}
